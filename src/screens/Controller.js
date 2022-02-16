@@ -1,37 +1,35 @@
 import React from "react";
-import Home from "../screens/home/Home";
-import Details from "../screens/details/Details";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import BookShow from "../screens/bookshow/BookShow";
-import Confirmation from "../screens/confirmation/Confirmation";
 
-const Controller = () => {
-  const baseUrl = "/api/v1/";
+import Grid from "@material-ui/core/Grid";
 
+function UpcomingMovies() {
   return (
-    <Router>
-      <div className="main-container">
-        <Route
-          exact
-          path="/"
-          render={(props) => <Home {...props} baseUrl={baseUrl} />}
-        />
-        <Route
-          path="/movie/:id"
-          render={(props) => <Details {...props} baseUrl={baseUrl} />}
-        />
-        <Route
-          path="/bookshow/:id"
-          render={(props) => <BookShow {...props} baseUrl={baseUrl} />}
-        />
-        <Route
-          path="/confirm/:id"
-          render={(props) => <Confirmation {...props} baseUrl={baseUrl} />}
-        />
+    <div className="homePageContent">
+      <div className="promoBar">Upcoming Movies</div>
+      <div className="upcomingMovieList">
+        <Grid container className="movielist" spacing={3}>
+          <Grid item xs={2}>
+            Hi
+          </Grid>
+          <Grid item xs={2}>
+            hello
+          </Grid>
+          <Grid item xs={2}>
+            hoo
+          </Grid>
+          <Grid item xs={2}>
+            hii
+          </Grid>
+          <Grid item xs={2}>
+            Hi
+          </Grid>
+          <Grid item xs={2}>
+            hello
+          </Grid>
+        </Grid>
       </div>
-    </Router>
-    //<h1>Hello</h1>
+    </div>
   );
-};
+}
 
-export default Controller;
+export default UpcomingMovies;
